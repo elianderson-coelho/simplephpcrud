@@ -1,8 +1,6 @@
 <?php
     $pdo = new PDO('mysql:host=localhost;dbname=estudophp', 'root','root');
-
-    var_dump($pdo);
-    print_r($pdo);
+    
     //INSERT  
    if(isset($_POST['nome'])){
         $sql = $pdo->prepare("INSERT INTO clientes VALUES (null,?,?)");
@@ -18,9 +16,9 @@
 ?>
 
 <form method='post'>
-    <input type="text" name="nome">
-    <input type="text" name="email">
-    <input type="submit" value="Enviar">
+    NAME <input type="text" name="nome">
+    EMAIL <input type="text" name="email">
+    <input type="submit" value="Submit">
 </form>
 
 <?php
